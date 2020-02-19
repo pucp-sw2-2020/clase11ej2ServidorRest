@@ -14,8 +14,8 @@ public class Product {
     @Column(nullable = false)
     private String productname;
     private BigDecimal unitprice;
-    private int unitsinstock;
-    private int unitsonorder;
+    private Integer unitsinstock;
+    private Integer unitsonorder;
     @ManyToOne
     @JoinColumn(name = "SupplierID")
     private Supplier supplier;
@@ -23,9 +23,9 @@ public class Product {
     @JoinColumn(name = "CategoryID")
     private Category category;
     private String quantityperunit;
-    private int reorderlevel;
+    private Integer reorderlevel;
     @Column(nullable = false)
-    private boolean discontinued;
+    private Boolean discontinued;
 
     public int getId() {
         return id;
@@ -75,35 +75,35 @@ public class Product {
         this.unitprice = unitprice;
     }
 
-    public int getUnitsinstock() {
+    public Integer getUnitsinstock() {
         return unitsinstock;
     }
 
-    public void setUnitsinstock(int unitsinstock) {
+    public void setUnitsinstock(Integer unitsinstock) {
         this.unitsinstock = unitsinstock;
     }
 
-    public int getUnitsonorder() {
+    public Integer getUnitsonorder() {
         return unitsonorder;
     }
 
-    public void setUnitsonorder(int unitsonorder) {
+    public void setUnitsonorder(Integer unitsonorder) {
         this.unitsonorder = unitsonorder;
     }
 
-    public int getReorderlevel() {
+    public Integer getReorderlevel() {
         return reorderlevel;
     }
 
-    public void setReorderlevel(int reorderlevel) {
+    public void setReorderlevel(Integer reorderlevel) {
         this.reorderlevel = reorderlevel;
     }
 
-    public boolean isDiscontinued() {
+    public Boolean getDiscontinued() {
         return discontinued;
     }
 
-    public void setDiscontinued(boolean discontinued) {
+    public void setDiscontinued(Boolean discontinued) {
         this.discontinued = discontinued;
     }
 }
